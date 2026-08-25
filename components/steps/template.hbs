@@ -1,0 +1,16 @@
+<section class="sc-block sc-steps sc-steps--{{ properties.layout }} sc-section sc-section--{{ properties.surface }}{{#if properties.accent}} sc-accent-{{ properties.accent }}{{/if}}" data-sc-theme="{{ properties.theme }}">
+    <div class="sc-container">
+        {{#if properties.heading}}<h2 class="sc-steps__heading">{{ properties.heading }}</h2>{{/if}}
+        <ol class="sc-steps__list">
+            {{#each properties.items as item}}
+            <li class="sc-step">
+                <div class="sc-step__num" aria-hidden="true"></div>
+                <div class="sc-step__body">
+                    <h3 class="sc-step__title">{{ item.data.title }}</h3>
+                    <p class="sc-step__text">{{ item.data.text }}</p>
+                </div>
+            </li>
+            {{/each}}
+        </ol>
+    </div>
+</section>

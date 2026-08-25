@@ -1,0 +1,12 @@
+/* Card — a lean, standalone content card (image + title + text + action).
+   A light wrapper (not a full section band), consistent with alert/button. */
+.sc-cardblk { padding-block: 0.75rem; }
+.sc-cardblk__card { max-width: 460px; overflow: hidden; border: 1px solid hsl(var(--sc-border)); border-radius: calc(var(--sc-radius) + 4px); background: hsl(var(--sc-card)); }
+.sc-cardblk__card--center { margin-inline: auto; text-align: center; }
+.sc-cardblk__media { aspect-ratio: 16 / 9; background: hsl(var(--sc-muted)); }
+.sc-cardblk__img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.sc-cardblk__body { padding: 1.5rem; }
+.sc-cardblk__body .sc-eyebrow { margin-bottom: 0.5rem; }
+.sc-cardblk__title { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.01em; color: hsl(var(--sc-foreground)); }
+.sc-cardblk__text { margin-top: 0.5rem; color: hsl(var(--sc-muted-foreground)); font-size: 0.9375rem; line-height: 1.6; }
+.sc-cardblk__link { margin-top: 1.25rem; }

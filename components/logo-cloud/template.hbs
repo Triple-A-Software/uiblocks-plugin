@@ -1,0 +1,10 @@
+<section class="sc-block sc-logos sc-section sc-section--{{ properties.surface }}{{#if properties.grayscale}} sc-logos--gray{{/if}}" data-sc-theme="{{ properties.theme }}">
+    <div class="sc-container">
+        {{#if properties.heading}}<p class="sc-logos__title">{{ properties.heading }}</p>{{/if}}
+        <div class="sc-logos__grid">
+            {{#each relations.logos as logo}}
+            <img class="sc-logos__img" loading="lazy" decoding="async" alt="{{ logo.title }}" src="{{ image_path(logo, 'w_240,fit_inside') }}">
+            {{/each}}
+        </div>
+    </div>
+</section>

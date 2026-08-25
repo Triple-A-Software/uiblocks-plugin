@@ -1,0 +1,11 @@
+/* Steps / Process — numbered steps (CSS counter), vertical or horizontal. */
+.sc-steps__heading { font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 800; letter-spacing: -0.02em; margin-bottom: clamp(2rem, 4vw, 3rem); color: hsl(var(--sc-foreground)); }
+.sc-steps__list { list-style: none; margin: 0; padding: 0; counter-reset: sc-step; }
+.sc-steps--vertical .sc-steps__list { display: grid; gap: 1.5rem; }
+.sc-steps--horizontal .sc-steps__list { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
+.sc-step { display: flex; gap: 1rem; align-items: flex-start; }
+.sc-steps--horizontal .sc-step { flex-direction: column; }
+.sc-step__num { flex: none; display: flex; align-items: center; justify-content: center; width: 2.25rem; height: 2.25rem; border-radius: 9999px; background: hsl(var(--sc-primary)); color: hsl(var(--sc-primary-foreground)); font-weight: 700; font-size: 0.95rem; }
+.sc-step__num::before { counter-increment: sc-step; content: counter(sc-step); }
+.sc-step__title { font-weight: 600; font-size: 1.05rem; margin-bottom: 0.25rem; color: hsl(var(--sc-foreground)); }
+.sc-step__text { color: hsl(var(--sc-muted-foreground)); font-size: 0.94rem; line-height: 1.6; white-space: pre-line; }

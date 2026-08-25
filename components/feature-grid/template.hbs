@@ -1,0 +1,19 @@
+<section class="sc-block sc-features sc-section sc-section--{{ properties.surface }}{{#if properties.accent}} sc-accent-{{ properties.accent }}{{/if}}" data-sc-theme="{{ properties.theme }}" style="--sc-cols: {{ properties.columns }}">
+    <div class="sc-container">
+        {{#if properties.heading}}
+        <div class="sc-features__head">
+            <h2 class="sc-features__title">{{ properties.heading }}</h2>
+            {{#if properties.intro}}<p class="sc-features__intro">{{ properties.intro }}</p>{{/if}}
+        </div>
+        {{/if}}
+        <div class="sc-features__grid">
+            {{#each properties.items as item}}
+            <article class="sc-feature">
+                {{#if item.data.icon}}<span class="sc-feature__icon i-tabler-{{ item.data.icon }}" aria-hidden="true"></span>{{/if}}
+                <h3 class="sc-feature__title">{{ item.data.title }}</h3>
+                <p class="sc-feature__text">{{ item.data.text }}</p>
+            </article>
+            {{/each}}
+        </div>
+    </div>
+</section>

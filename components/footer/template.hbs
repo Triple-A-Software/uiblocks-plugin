@@ -1,0 +1,16 @@
+<footer class="sc-block sc-footer{{#if properties.accent}} sc-accent-{{ properties.accent }}{{/if}}" data-sc-theme="{{ properties.theme }}">
+    <div class="sc-container sc-footer__inner">
+        <div class="sc-footer__brand">
+            <div class="sc-footer__name">{{#if relations.logo as logo}}<img class="sc-footer__logo" src="{{ image_path(logo, 'w_400,fit_inside') }}" alt="{{ properties.brand }}">{{/if}}<span class="sc-footer__name-text">{{ properties.brand }}</span></div>
+            {{#if properties.tagline}}<p class="sc-footer__tagline">{{ properties.tagline }}</p>{{/if}}
+        </div>
+        <nav class="sc-footer__links">
+            {{#each properties.links as link}}
+            <a class="sc-footer__link" href="{{ link.data.href }}">{{ link.data.label }}</a>
+            {{/each}}
+        </nav>
+    </div>
+    <div class="sc-container sc-footer__bottom">
+        <span class="sc-footer__legal">{{ properties.legal }}</span>
+    </div>
+</footer>

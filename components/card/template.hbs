@@ -1,0 +1,17 @@
+<div class="sc-block sc-cardblk{{#if properties.accent}} sc-accent-{{ properties.accent }}{{/if}}" data-sc-theme="{{ properties.theme }}">
+    <div class="sc-container">
+        <article class="sc-cardblk__card sc-cardblk__card--{{ properties.align }}">
+            {{#if relations.image as image}}
+            <div class="sc-cardblk__media">
+                <img class="sc-cardblk__img" loading="lazy" decoding="async" alt="{{ image.title }}" src="{{ image_path(image, 'w_800,fit_inside') }}">
+            </div>
+            {{/if}}
+            <div class="sc-cardblk__body">
+                {{#if properties.eyebrow}}<span class="sc-eyebrow">{{ properties.eyebrow }}</span>{{/if}}
+                <h3 class="sc-cardblk__title">{{ properties.title }}</h3>
+                {{#if properties.body}}<p class="sc-cardblk__text">{{ properties.body }}</p>{{/if}}
+                {{#if properties.linkLabel}}<a class="sc-btn sc-btn--outline sc-btn--sm sc-cardblk__link" href="{{ properties.linkHref }}">{{ properties.linkLabel }}</a>{{/if}}
+            </div>
+        </article>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="sc-block sc-alert sc-alert--{{ properties.variant }}" data-sc-theme="{{ properties.theme }}" role="note">
+    <div class="sc-container">
+        <div class="sc-alert__box">
+            {{#if properties.icon}}<span class="sc-alert__icon i-tabler-{{ properties.icon }}" aria-hidden="true"></span>{{/if}}
+            <div class="sc-alert__content">
+                {{#if properties.title}}<div class="sc-alert__title">{{ properties.title }}</div>{{/if}}
+                {{#if properties.body}}<div class="sc-alert__text">{{ properties.body }}</div>{{/if}}
+            </div>
+        </div>
+    </div>
+</div>

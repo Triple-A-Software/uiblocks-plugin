@@ -1,0 +1,6 @@
+/* Badge — small inline label. */
+.sc-badge { display: inline-flex; align-items: center; border-radius: 9999px; padding: 0.2rem 0.6rem; font-size: 0.75rem; font-weight: 600; line-height: 1; border: 1px solid transparent; white-space: nowrap; }
+.sc-badge--default { background: hsl(var(--sc-primary)); color: hsl(var(--sc-primary-foreground)); }
+.sc-badge--secondary { background: hsl(var(--sc-secondary)); color: hsl(var(--sc-secondary-foreground)); }
+.sc-badge--outline { border-color: hsl(var(--sc-border)); color: hsl(var(--sc-foreground)); }
+.sc-badge--destructive { background: hsl(var(--sc-destructive)); color: hsl(var(--sc-destructive-foreground)); }

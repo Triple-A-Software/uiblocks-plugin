@@ -1,0 +1,9 @@
+<div class="sc-block sc-annc sc-annc--{{ properties.style }}{{#if properties.accent}} sc-accent-{{ properties.accent }}{{/if}}" data-sc-theme="{{ properties.theme }}">
+    <input type="checkbox" id="sc-annc-dismiss" class="sc-annc__toggle" hidden>
+    <div class="sc-annc__bar">
+        <div class="sc-container sc-annc__inner">
+            <p class="sc-annc__text">{{ properties.text }}{{#if properties.linkLabel}} <a class="sc-annc__link" href="{{ properties.linkHref }}">{{ properties.linkLabel }}</a>{{/if}}</p>
+            {{#if properties.dismissible}}<label class="sc-annc__close" for="sc-annc-dismiss" aria-label="Schließen">&times;</label>{{/if}}
+        </div>
+    </div>
+</div>

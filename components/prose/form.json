@@ -1,0 +1,13 @@
+{
+    "$schema": "https://neleto.io/schemas/main/form_schema.json",
+    "label": { "de": "Text (Prosa)", "en": "Prose" },
+    "properties": [
+        { "id": "body", "type": "richtext", "label": { "de": "Inhalt", "en": "Content" } },
+        { "id": "width", "type": "buttongroup", "defaultValue": "contained",
+          "options": [ { "value": "contained", "label": { "de": "Schmal", "en": "Narrow" } }, { "value": "full", "label": { "de": "Breit", "en": "Wide" } } ],
+          "label": { "de": "Breite", "en": "Width" } },
+        { "id": "theme", "type": "buttongroup", "defaultValue": "auto",
+          "options": [ { "value": "auto", "label": { "de": "Auto", "en": "Auto" } }, { "value": "light", "label": { "de": "Hell", "en": "Light" } }, { "value": "dark", "label": { "de": "Dunkel", "en": "Dark" } } ],
+          "label": { "de": "Farbschema", "en": "Theme" } }
+    ]
+}

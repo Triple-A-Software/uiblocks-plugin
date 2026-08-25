@@ -1,0 +1,21 @@
+/* Navigation — sticky header with a CSS-only (checkbox) mobile menu.
+   Single instance per page (uses a fixed toggle id). */
+.sc-nav { background: hsl(var(--sc-background) / 0.85); border-bottom: 1px solid hsl(var(--sc-border)); backdrop-filter: saturate(180%) blur(10px); -webkit-backdrop-filter: saturate(180%) blur(10px); }
+.sc-nav--sticky { position: sticky; top: 0; z-index: 50; }
+.sc-nav__bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 4rem; }
+.sc-nav__brand { display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 700; font-size: 1.125rem; letter-spacing: -0.01em; color: hsl(var(--sc-foreground)); text-decoration: none; }
+.sc-nav__logo { display: block; height: 1.9rem; width: auto; max-width: 180px; object-fit: contain; }
+.sc-nav__brand:has(.sc-nav__logo) .sc-nav__brand-text { display: none; }
+.sc-nav__menu { display: flex; align-items: center; gap: 0.25rem; }
+.sc-nav__link { padding: 0.5rem 0.75rem; border-radius: var(--sc-radius); font-size: 0.875rem; font-weight: 500; color: hsl(var(--sc-muted-foreground)); text-decoration: none; transition: color 0.15s, background 0.15s; }
+.sc-nav__link:hover { color: hsl(var(--sc-foreground)); background: hsl(var(--sc-accent)); }
+.sc-nav__cta { margin-left: 0.5rem; }
+.sc-nav__burger { display: none; flex-direction: column; gap: 5px; padding: 0.5rem; cursor: pointer; border-radius: var(--sc-radius); background: transparent; }
+.sc-nav__burger span { display: block; width: 20px; height: 2px; background: hsl(var(--sc-foreground)); border-radius: 2px; }
+@media (max-width: 768px) {
+    .sc-nav__burger { display: flex; }
+    .sc-nav__bar { flex-wrap: wrap; }
+    .sc-nav__menu { display: none; flex-basis: 100%; flex-direction: column; align-items: stretch; gap: 0.25rem; padding-bottom: 1rem; }
+    .sc-nav__toggle:checked ~ .sc-container .sc-nav__menu { display: flex; }
+    .sc-nav__cta { margin-left: 0; margin-top: 0.25rem; }
+}

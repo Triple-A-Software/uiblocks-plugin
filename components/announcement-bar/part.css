@@ -1,0 +1,10 @@
+/* Announcement bar — a top banner with an optional CSS-only dismiss (per page
+   load; persisting across visits would need JS). One per page (fixed toggle id). */
+.sc-annc__toggle:checked ~ .sc-annc__bar { display: none; }
+.sc-annc__bar { background: hsl(var(--sc-primary)); color: hsl(var(--sc-primary-foreground)); }
+.sc-annc--soft .sc-annc__bar { background: hsl(var(--sc-muted)); color: hsl(var(--sc-foreground)); border-bottom: 1px solid hsl(var(--sc-border)); }
+.sc-annc__inner { position: relative; display: flex; align-items: center; justify-content: center; gap: 1rem; min-height: 2.75rem; padding-block: 0.5rem; text-align: center; }
+.sc-annc__text { font-size: 0.9rem; font-weight: 500; }
+.sc-annc__link { color: inherit; text-decoration: underline; text-underline-offset: 2px; font-weight: 600; }
+.sc-annc__close { position: absolute; right: 0; top: 50%; transform: translateY(-50%); cursor: pointer; font-size: 1.25rem; line-height: 1; padding: 0.25rem 0.5rem; color: inherit; opacity: 0.7; }
+.sc-annc__close:hover { opacity: 1; }

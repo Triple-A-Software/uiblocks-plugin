@@ -1,0 +1,14 @@
+/* Alert — inline callout in four semantic variants. */
+.sc-alert { padding-block: 0.75rem; }
+.sc-alert__box { display: flex; gap: 0.75rem; align-items: flex-start; padding: 1rem 1.25rem; border: 1px solid hsl(var(--sc-border)); border-radius: var(--sc-radius); background: hsl(var(--sc-card)); }
+.sc-alert__icon { flex: none; font-size: 1.25rem; margin-top: 0.1rem; }
+.sc-alert__title { font-weight: 600; font-size: 0.9375rem; color: hsl(var(--sc-foreground)); }
+.sc-alert__text { color: hsl(var(--sc-muted-foreground)); font-size: 0.9375rem; line-height: 1.55; margin-top: 0.15rem; white-space: pre-line; }
+.sc-alert--info .sc-alert__box { border-color: hsl(221 83% 53% / 0.4); background: hsl(221 83% 53% / 0.08); }
+.sc-alert--info .sc-alert__icon { color: hsl(221 83% 53%); }
+.sc-alert--success .sc-alert__box { border-color: hsl(142 71% 40% / 0.4); background: hsl(142 71% 40% / 0.08); }
+.sc-alert--success .sc-alert__icon { color: hsl(142 71% 36%); }
+.sc-alert--warning .sc-alert__box { border-color: hsl(38 92% 50% / 0.45); background: hsl(38 92% 50% / 0.10); }
+.sc-alert--warning .sc-alert__icon { color: hsl(32 90% 42%); }
+.sc-alert--destructive .sc-alert__box { border-color: hsl(var(--sc-destructive) / 0.45); background: hsl(var(--sc-destructive) / 0.08); }
+.sc-alert--destructive .sc-alert__icon, .sc-alert--destructive .sc-alert__title { color: hsl(var(--sc-destructive)); }

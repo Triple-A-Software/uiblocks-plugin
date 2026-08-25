@@ -1,0 +1,5 @@
+/* Section — a container band that wraps child blocks (canHaveChildren), with an
+   optional anchor id + custom classes, surface/width/padding and theme/accent.
+   The .sc-section band, padding modifiers and .sc-container helper come from the
+   shared base tokens. */
+.sc-sec__inner--contained { max-width: 768px; margin-inline: auto; }

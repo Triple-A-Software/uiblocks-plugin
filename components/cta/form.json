@@ -1,0 +1,21 @@
+{
+    "$schema": "https://neleto.io/schemas/main/form_schema.json",
+    "label": { "de": "Call-to-Action", "en": "Call to Action" },
+    "properties": [
+        { "id": "heading", "type": "textarea", "defaultValue": "Ready to get started?", "label": { "de": "Überschrift", "en": "Heading" } },
+        { "id": "text", "type": "textarea", "label": { "de": "Text", "en": "Text" } },
+        { "id": "primaryLabel", "type": "textarea", "defaultValue": "Get started", "label": { "de": "Button 1 Text", "en": "Primary button" } },
+        { "id": "primaryHref", "type": "text", "defaultValue": "/", "label": { "de": "Button 1 Link", "en": "Primary link" } },
+        { "id": "secondaryLabel", "type": "textarea", "label": { "de": "Button 2 Text", "en": "Secondary button" } },
+        { "id": "secondaryHref", "type": "text", "defaultValue": "/", "label": { "de": "Button 2 Link", "en": "Secondary link" } },
+        { "id": "style", "type": "buttongroup", "defaultValue": "soft",
+          "options": [ { "value": "soft", "label": { "de": "Dezent", "en": "Soft" } }, { "value": "bold", "label": { "de": "Kräftig", "en": "Bold" } } ],
+          "label": { "de": "Stil", "en": "Style" } },
+        { "id": "theme", "type": "buttongroup", "defaultValue": "auto",
+          "options": [ { "value": "auto", "label": { "de": "Auto", "en": "Auto" } }, { "value": "light", "label": { "de": "Hell", "en": "Light" } }, { "value": "dark", "label": { "de": "Dunkel", "en": "Dark" } } ],
+          "label": { "de": "Farbschema", "en": "Theme" } },
+        { "id": "accent", "type": "select", "dataType": "string", "defaultValue": "",
+          "options": [ { "value": "", "label": { "de": "Neutral", "en": "Neutral" } }, { "value": "blue", "label": { "de": "Blau", "en": "Blue" } }, { "value": "green", "label": { "de": "Grün", "en": "Green" } }, { "value": "violet", "label": { "de": "Violett", "en": "Violet" } }, { "value": "rose", "label": { "de": "Rosé", "en": "Rose" } }, { "value": "amber", "label": { "de": "Bernstein", "en": "Amber" } } ],
+          "label": { "de": "Akzent", "en": "Accent" } }
+    ]
+}

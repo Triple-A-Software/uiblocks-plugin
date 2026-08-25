@@ -1,0 +1,13 @@
+<section class="sc-block sc-acc sc-section{{#if properties.accent}} sc-accent-{{ properties.accent }}{{/if}}" data-sc-theme="{{ properties.theme }}">
+    <div class="sc-container sc-acc__inner">
+        {{#if properties.heading}}<h2 class="sc-acc__heading">{{ properties.heading }}</h2>{{/if}}
+        <div class="sc-acc__list">
+            {{#each properties.items as item}}
+            <details class="sc-acc__item">
+                <summary class="sc-acc__summary">{{ item.data.title }}<span class="sc-acc__chevron" aria-hidden="true"></span></summary>
+                <div class="sc-acc__content sc-prose">{{ item.data.content }}</div>
+            </details>
+            {{/each}}
+        </div>
+    </div>
+</section>

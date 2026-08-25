@@ -1,0 +1,15 @@
+/* Tabs — CSS-only via radio + :has(). One Tabs block per page (radios share a
+   group name). Requires :has() support (all current browsers). */
+.sc-tabs__heading { font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 800; letter-spacing: -0.02em; margin-bottom: clamp(1.5rem, 3vw, 2rem); color: hsl(var(--sc-foreground)); }
+.sc-tabs { display: flex; flex-wrap: wrap; gap: 0.25rem; border-bottom: 1px solid hsl(var(--sc-border)); }
+.sc-tabs__radio { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.sc-tabs__label { order: 0; padding: 0.6rem 1rem; cursor: pointer; font-weight: 500; font-size: 0.9rem; color: hsl(var(--sc-muted-foreground)); border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color 0.15s, border-color 0.15s; }
+.sc-tabs__label:hover { color: hsl(var(--sc-foreground)); }
+.sc-tabs__label:has(.sc-tabs__radio:focus-visible) { outline: 2px solid hsl(var(--sc-ring)); outline-offset: 2px; border-radius: 4px; }
+.sc-tabs__panel { order: 1; flex-basis: 100%; width: 100%; display: none; padding-top: 1.25rem; }
+/* selected tab */
+.sc-tabs__label:has(.sc-tabs__radio:checked) { color: hsl(var(--sc-foreground)); border-bottom-color: hsl(var(--sc-primary)); }
+.sc-tabs__label:has(.sc-tabs__radio:checked) + .sc-tabs__panel { display: block; }
+/* default (nothing selected yet): first tab + panel */
+.sc-tabs:not(:has(.sc-tabs__radio:checked)) .sc-tabs__label:first-of-type { color: hsl(var(--sc-foreground)); border-bottom-color: hsl(var(--sc-primary)); }
+.sc-tabs:not(:has(.sc-tabs__radio:checked)) .sc-tabs__panel:first-of-type { display: block; }

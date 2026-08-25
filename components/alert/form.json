@@ -1,0 +1,15 @@
+{
+    "$schema": "https://neleto.io/schemas/main/form_schema.json",
+    "label": { "de": "Hinweis", "en": "Alert" },
+    "properties": [
+        { "id": "title", "type": "textarea", "defaultValue": "Note", "label": { "de": "Titel", "en": "Title" } },
+        { "id": "body", "type": "textarea", "label": { "de": "Text", "en": "Text" } },
+        { "id": "icon", "type": "text", "defaultValue": "info-circle", "label": { "de": "Icon (Tabler-Name)", "en": "Icon (Tabler name)" } },
+        { "id": "variant", "type": "select", "dataType": "string", "defaultValue": "info",
+          "options": [ { "value": "info", "label": { "de": "Info", "en": "Info" } }, { "value": "success", "label": { "de": "Erfolg", "en": "Success" } }, { "value": "warning", "label": { "de": "Warnung", "en": "Warning" } }, { "value": "destructive", "label": { "de": "Fehler", "en": "Destructive" } } ],
+          "label": { "de": "Variante", "en": "Variant" } },
+        { "id": "theme", "type": "buttongroup", "defaultValue": "auto",
+          "options": [ { "value": "auto", "label": { "de": "Auto", "en": "Auto" } }, { "value": "light", "label": { "de": "Hell", "en": "Light" } }, { "value": "dark", "label": { "de": "Dunkel", "en": "Dark" } } ],
+          "label": { "de": "Farbschema", "en": "Theme" } }
+    ]
+}

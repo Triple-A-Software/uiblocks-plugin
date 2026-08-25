@@ -1,0 +1,21 @@
+<section class="sc-block sc-hero sc-section sc-section--{{ properties.surface }} sc-hero--{{ properties.layout }}{{#if properties.accent}} sc-accent-{{ properties.accent }}{{/if}}" data-sc-theme="{{ properties.theme }}">
+    <div class="sc-container sc-hero__inner">
+        <div class="sc-hero__content">
+            {{#if properties.eyebrow}}<span class="sc-eyebrow sc-hero__eyebrow">{{ properties.eyebrow }}</span>{{/if}}
+            <h1 class="sc-hero__title">{{ properties.heading }}</h1>
+            {{#if properties.subtext}}<p class="sc-hero__sub">{{ properties.subtext }}</p>{{/if}}
+            <div class="sc-hero__actions">
+                {{#if properties.primaryLabel}}<a class="sc-btn sc-btn--primary sc-btn--lg" href="{{ properties.primaryHref }}">{{ properties.primaryLabel }}</a>{{/if}}
+                {{#if properties.secondaryLabel}}<a class="sc-btn sc-btn--outline sc-btn--lg" href="{{ properties.secondaryHref }}">{{ properties.secondaryLabel }}</a>{{/if}}
+            </div>
+        </div>
+        {{#if relations.image as image}}
+        <div class="sc-hero__media">
+            <img class="sc-hero__img" loading="lazy" decoding="async" alt="{{ image.title }}"
+                 src="{{ image_path(image, 'w_1200,fit_inside') }}"
+                 srcset="{{ image_path(image, 'w_800,fit_inside') }} 800w, {{ image_path(image, 'w_1200,fit_inside') }} 1200w, {{ image_path(image, 'w_1600,fit_inside') }} 1600w"
+                 sizes="(max-width: 900px) 100vw, 50vw">
+        </div>
+        {{/if}}
+    </div>
+</section>

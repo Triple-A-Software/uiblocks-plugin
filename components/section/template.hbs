@@ -1,0 +1,5 @@
+<section{{#if properties.anchorId}} id="{{ properties.anchorId }}"{{/if}} class="sc-block sc-sec sc-section sc-section--{{ properties.surface }} sc-section--pad-{{ properties.padding }}{{#if properties.accent}} sc-accent-{{ properties.accent }}{{/if}}{{#if properties.cssClass}} {{ properties.cssClass }}{{/if}}" data-sc-theme="{{ properties.theme }}">
+    <div class="sc-container sc-sec__inner sc-sec__inner--{{ properties.width }}">
+        {{ render_elements(children) }}
+    </div>
+</section>

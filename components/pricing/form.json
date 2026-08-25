@@ -1,0 +1,43 @@
+{
+    "$schema": "https://neleto.io/schemas/main/form_schema.json",
+    "label": { "de": "Preise", "en": "Pricing" },
+    "properties": [
+        { "id": "heading", "type": "textarea", "label": { "de": "Überschrift", "en": "Heading" } },
+        { "id": "intro", "type": "textarea", "label": { "de": "Einleitung", "en": "Intro" } },
+        { "id": "columns", "type": "select", "dataType": "number", "defaultValue": 3,
+          "options": [ { "value": 2, "label": { "de": "2", "en": "2" } }, { "value": 3, "label": { "de": "3", "en": "3" } }, { "value": 4, "label": { "de": "4", "en": "4" } } ],
+          "label": { "de": "Spalten", "en": "Columns" } },
+        {
+            "id": "plans",
+            "type": "builder",
+            "label": { "de": "Tarife", "en": "Plans" },
+            "items": [
+                {
+                    "name": "plan",
+                    "label": { "de": "Tarif", "en": "Plan" },
+                    "data": {},
+                    "props": [
+                        { "id": "name", "type": "textarea", "label": { "de": "Name", "en": "Name" } },
+                        { "id": "price", "type": "textarea", "label": { "de": "Preis", "en": "Price" }, "hint": { "de": "z. B. 29 €", "en": "e.g. $29" } },
+                        { "id": "period", "type": "textarea", "label": { "de": "Zeitraum", "en": "Period" }, "hint": { "de": "z. B. / Monat", "en": "e.g. / month" } },
+                        { "id": "description", "type": "textarea", "label": { "de": "Kurzbeschreibung", "en": "Description" } },
+                        { "id": "features", "type": "richtext", "label": { "de": "Leistungen (Liste)", "en": "Features (list)" }, "hint": { "de": "Als Aufzählung eingeben.", "en": "Enter as a bullet list." } },
+                        { "id": "ctaLabel", "type": "textarea", "label": { "de": "Button-Text", "en": "Button label" } },
+                        { "id": "ctaHref", "type": "text", "defaultValue": "/", "label": { "de": "Button-Link", "en": "Button link" } },
+                        { "id": "badge", "type": "textarea", "label": { "de": "Badge", "en": "Badge" }, "hint": { "de": "z. B. Beliebt", "en": "e.g. Popular" } },
+                        { "id": "highlight", "type": "checkbox", "defaultValue": false, "label": { "de": "Hervorheben", "en": "Highlight" } }
+                    ]
+                }
+            ]
+        },
+        { "id": "surface", "type": "buttongroup", "defaultValue": "default",
+          "options": [ { "value": "default", "label": { "de": "Standard", "en": "Default" } }, { "value": "muted", "label": { "de": "Gedämpft", "en": "Muted" } } ],
+          "label": { "de": "Hintergrund", "en": "Surface" } },
+        { "id": "theme", "type": "buttongroup", "defaultValue": "auto",
+          "options": [ { "value": "auto", "label": { "de": "Auto", "en": "Auto" } }, { "value": "light", "label": { "de": "Hell", "en": "Light" } }, { "value": "dark", "label": { "de": "Dunkel", "en": "Dark" } } ],
+          "label": { "de": "Farbschema", "en": "Theme" } },
+        { "id": "accent", "type": "select", "dataType": "string", "defaultValue": "",
+          "options": [ { "value": "", "label": { "de": "Neutral", "en": "Neutral" } }, { "value": "blue", "label": { "de": "Blau", "en": "Blue" } }, { "value": "green", "label": { "de": "Grün", "en": "Green" } }, { "value": "violet", "label": { "de": "Violett", "en": "Violet" } }, { "value": "rose", "label": { "de": "Rosé", "en": "Rose" } }, { "value": "amber", "label": { "de": "Bernstein", "en": "Amber" } } ],
+          "label": { "de": "Akzent", "en": "Accent" } }
+    ]
+}

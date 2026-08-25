@@ -1,0 +1,32 @@
+{
+    "$schema": "https://neleto.io/schemas/main/form_schema.json",
+    "label": { "de": "Footer", "en": "Footer" },
+    "properties": [
+        { "id": "brand", "type": "textarea", "defaultValue": "Brand", "label": { "de": "Markenname", "en": "Brand" } },
+        { "id": "logo", "type": "relation", "relationName": "file", "label": { "de": "Logo", "en": "Logo" }, "hint": { "de": "Optional. Ersetzt den Markennamen (dieser wird als Alt-Text verwendet).", "en": "Optional. Replaces the brand text (which is used as its alt text)." } },
+        { "id": "tagline", "type": "textarea", "label": { "de": "Untertitel", "en": "Tagline" } },
+        {
+            "id": "links",
+            "type": "builder",
+            "label": { "de": "Links", "en": "Links" },
+            "items": [
+                {
+                    "name": "footer-link",
+                    "label": { "de": "Link", "en": "Link" },
+                    "data": {},
+                    "props": [
+                        { "id": "label", "type": "textarea", "label": { "de": "Beschriftung", "en": "Label" } },
+                        { "id": "href", "type": "text", "defaultValue": "/", "label": { "de": "URL", "en": "URL" } }
+                    ]
+                }
+            ]
+        },
+        { "id": "legal", "type": "textarea", "defaultValue": "© 2026 Brand. All rights reserved.", "label": { "de": "Rechtlicher Hinweis", "en": "Legal line" } },
+        { "id": "theme", "type": "buttongroup", "defaultValue": "auto",
+          "options": [ { "value": "auto", "label": { "de": "Auto", "en": "Auto" } }, { "value": "light", "label": { "de": "Hell", "en": "Light" } }, { "value": "dark", "label": { "de": "Dunkel", "en": "Dark" } } ],
+          "label": { "de": "Farbschema", "en": "Theme" } },
+        { "id": "accent", "type": "select", "dataType": "string", "defaultValue": "",
+          "options": [ { "value": "", "label": { "de": "Neutral", "en": "Neutral" } }, { "value": "blue", "label": { "de": "Blau", "en": "Blue" } }, { "value": "green", "label": { "de": "Grün", "en": "Green" } }, { "value": "violet", "label": { "de": "Violett", "en": "Violet" } }, { "value": "rose", "label": { "de": "Rosé", "en": "Rose" } }, { "value": "amber", "label": { "de": "Bernstein", "en": "Amber" } } ],
+          "label": { "de": "Akzent", "en": "Accent" } }
+    ]
+}

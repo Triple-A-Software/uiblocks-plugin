@@ -1,0 +1,19 @@
+{
+    "$schema": "https://neleto.io/schemas/main/form_schema.json",
+    "label": { "de": "Ankündigungsleiste", "en": "Announcement Bar" },
+    "properties": [
+        { "id": "text", "type": "textarea", "defaultValue": "New: our offer is here!", "label": { "de": "Text", "en": "Text" } },
+        { "id": "linkLabel", "type": "textarea", "label": { "de": "Link-Text", "en": "Link label" } },
+        { "id": "linkHref", "type": "text", "defaultValue": "/", "label": { "de": "Link-Ziel", "en": "Link URL" } },
+        { "id": "style", "type": "buttongroup", "defaultValue": "bold",
+          "options": [ { "value": "bold", "label": { "de": "Kräftig", "en": "Bold" } }, { "value": "soft", "label": { "de": "Dezent", "en": "Soft" } } ],
+          "label": { "de": "Stil", "en": "Style" } },
+        { "id": "dismissible", "type": "checkbox", "defaultValue": true, "label": { "de": "Schließbar", "en": "Dismissible" } },
+        { "id": "theme", "type": "buttongroup", "defaultValue": "auto",
+          "options": [ { "value": "auto", "label": { "de": "Auto", "en": "Auto" } }, { "value": "light", "label": { "de": "Hell", "en": "Light" } }, { "value": "dark", "label": { "de": "Dunkel", "en": "Dark" } } ],
+          "label": { "de": "Farbschema", "en": "Theme" } },
+        { "id": "accent", "type": "select", "dataType": "string", "defaultValue": "",
+          "options": [ { "value": "", "label": { "de": "Neutral", "en": "Neutral" } }, { "value": "blue", "label": { "de": "Blau", "en": "Blue" } }, { "value": "green", "label": { "de": "Grün", "en": "Green" } }, { "value": "violet", "label": { "de": "Violett", "en": "Violet" } }, { "value": "rose", "label": { "de": "Rosé", "en": "Rose" } }, { "value": "amber", "label": { "de": "Bernstein", "en": "Amber" } } ],
+          "label": { "de": "Akzent", "en": "Accent" } }
+    ]
+}

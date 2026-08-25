@@ -1,0 +1,13 @@
+<section class="sc-block sc-stats sc-section sc-section--{{ properties.surface }}{{#if properties.accent}} sc-accent-{{ properties.accent }}{{/if}}" data-sc-theme="{{ properties.theme }}" style="--sc-cols: {{ properties.columns }}">
+    <div class="sc-container">
+        {{#if properties.heading}}<h2 class="sc-stats__heading">{{ properties.heading }}</h2>{{/if}}
+        <div class="sc-stats__grid">
+            {{#each properties.items as item}}
+            <div class="sc-stat">
+                <div class="sc-stat__value">{{ item.data.value }}</div>
+                <div class="sc-stat__label">{{ item.data.label }}</div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section>

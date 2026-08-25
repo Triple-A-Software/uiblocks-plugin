@@ -1,0 +1,35 @@
+{
+    "$schema": "https://neleto.io/schemas/main/form_schema.json",
+    "label": { "de": "Kennzahlen", "en": "Stats" },
+    "properties": [
+        { "id": "heading", "type": "textarea", "label": { "de": "Überschrift", "en": "Heading" } },
+        { "id": "columns", "type": "select", "dataType": "number", "defaultValue": 4,
+          "options": [ { "value": 2, "label": { "de": "2", "en": "2" } }, { "value": 3, "label": { "de": "3", "en": "3" } }, { "value": 4, "label": { "de": "4", "en": "4" } } ],
+          "label": { "de": "Spalten", "en": "Columns" } },
+        {
+            "id": "items",
+            "type": "builder",
+            "label": { "de": "Kennzahlen", "en": "Stats" },
+            "items": [
+                {
+                    "name": "stat",
+                    "label": { "de": "Kennzahl", "en": "Stat" },
+                    "data": {},
+                    "props": [
+                        { "id": "value", "type": "textarea", "label": { "de": "Wert", "en": "Value" }, "hint": { "de": "z. B. 99,9 %, 10k+", "en": "e.g. 99.9%, 10k+" } },
+                        { "id": "label", "type": "textarea", "label": { "de": "Bezeichnung", "en": "Label" } }
+                    ]
+                }
+            ]
+        },
+        { "id": "surface", "type": "buttongroup", "defaultValue": "muted",
+          "options": [ { "value": "default", "label": { "de": "Standard", "en": "Default" } }, { "value": "muted", "label": { "de": "Gedämpft", "en": "Muted" } } ],
+          "label": { "de": "Hintergrund", "en": "Surface" } },
+        { "id": "theme", "type": "buttongroup", "defaultValue": "auto",
+          "options": [ { "value": "auto", "label": { "de": "Auto", "en": "Auto" } }, { "value": "light", "label": { "de": "Hell", "en": "Light" } }, { "value": "dark", "label": { "de": "Dunkel", "en": "Dark" } } ],
+          "label": { "de": "Farbschema", "en": "Theme" } },
+        { "id": "accent", "type": "select", "dataType": "string", "defaultValue": "",
+          "options": [ { "value": "", "label": { "de": "Neutral", "en": "Neutral" } }, { "value": "blue", "label": { "de": "Blau", "en": "Blue" } }, { "value": "green", "label": { "de": "Grün", "en": "Green" } }, { "value": "violet", "label": { "de": "Violett", "en": "Violet" } }, { "value": "rose", "label": { "de": "Rosé", "en": "Rose" } }, { "value": "amber", "label": { "de": "Bernstein", "en": "Amber" } } ],
+          "label": { "de": "Akzent", "en": "Accent" } }
+    ]
+}

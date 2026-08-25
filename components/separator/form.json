@@ -1,0 +1,13 @@
+{
+    "$schema": "https://neleto.io/schemas/main/form_schema.json",
+    "label": { "de": "Trennlinie", "en": "Separator" },
+    "properties": [
+        { "id": "label", "type": "textarea", "label": { "de": "Beschriftung (optional)", "en": "Label (optional)" } },
+        { "id": "spacing", "type": "buttongroup", "defaultValue": "md",
+          "options": [ { "value": "sm", "label": { "de": "Klein", "en": "Small" } }, { "value": "md", "label": { "de": "Mittel", "en": "Medium" } }, { "value": "lg", "label": { "de": "Groß", "en": "Large" } } ],
+          "label": { "de": "Abstand", "en": "Spacing" } },
+        { "id": "theme", "type": "buttongroup", "defaultValue": "auto",
+          "options": [ { "value": "auto", "label": { "de": "Auto", "en": "Auto" } }, { "value": "light", "label": { "de": "Hell", "en": "Light" } }, { "value": "dark", "label": { "de": "Dunkel", "en": "Dark" } } ],
+          "label": { "de": "Farbschema", "en": "Theme" } }
+    ]
+}

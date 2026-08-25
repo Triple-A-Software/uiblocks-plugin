@@ -1,0 +1,13 @@
+<section class="sc-block sc-faq sc-section{{#if properties.accent}} sc-accent-{{ properties.accent }}{{/if}}" data-sc-theme="{{ properties.theme }}">
+    <div class="sc-container sc-faq__inner">
+        {{#if properties.heading}}<h2 class="sc-faq__heading">{{ properties.heading }}</h2>{{/if}}
+        <div class="sc-faq__list">
+            {{#each properties.items as item}}
+            <details class="sc-faq__item">
+                <summary class="sc-faq__q">{{ item.data.question }}<span class="sc-faq__chevron" aria-hidden="true"></span></summary>
+                <div class="sc-faq__a">{{ item.data.answer }}</div>
+            </details>
+            {{/each}}
+        </div>
+    </div>
+</section>

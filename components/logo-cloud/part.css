@@ -1,0 +1,7 @@
+/* Logo cloud — centered, wrapping strip of logos with optional grayscale. */
+.sc-logos__title { text-align: center; color: hsl(var(--sc-muted-foreground)); font-size: 0.875rem; font-weight: 500; margin-bottom: 2rem; }
+.sc-logos__grid { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: clamp(1.5rem, 5vw, 3.5rem); }
+.sc-logos__img { height: 2rem; width: auto; max-width: 150px; object-fit: contain; opacity: 0.8; transition: opacity 0.2s, filter 0.2s; }
+.sc-logos__img:hover { opacity: 1; }
+.sc-logos--gray .sc-logos__img { filter: grayscale(1); opacity: 0.6; }
+.sc-logos--gray .sc-logos__img:hover { filter: grayscale(0); opacity: 1; }

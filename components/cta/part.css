@@ -1,0 +1,10 @@
+/* CTA — a soft or bold rounded panel with heading + actions. */
+.sc-cta__panel { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem 2rem; padding: clamp(1.5rem, 4vw, 3rem); border-radius: calc(var(--sc-radius) + 6px); border: 1px solid hsl(var(--sc-border)); background: hsl(var(--sc-muted)); }
+.sc-cta__panel--bold { background: hsl(var(--sc-primary)); border-color: transparent; color: hsl(var(--sc-primary-foreground)); }
+.sc-cta__title { font-size: clamp(1.35rem, 3vw, 2rem); font-weight: 800; letter-spacing: -0.02em; }
+.sc-cta__sub { margin-top: 0.5rem; max-width: 52ch; opacity: 0.85; font-size: 1rem; line-height: 1.6; }
+.sc-cta__actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+/* Invert buttons on the bold (primary-filled) panel. */
+.sc-cta__panel--bold .sc-btn--primary { background: hsl(var(--sc-primary-foreground)); color: hsl(var(--sc-primary)); }
+.sc-cta__panel--bold .sc-btn--outline { border-color: hsl(var(--sc-primary-foreground) / 0.4); color: hsl(var(--sc-primary-foreground)); }
+.sc-cta__panel--bold .sc-btn--outline:hover { background: hsl(var(--sc-primary-foreground) / 0.12); color: hsl(var(--sc-primary-foreground)); }

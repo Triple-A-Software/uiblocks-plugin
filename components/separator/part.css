@@ -1,0 +1,7 @@
+/* Separator — a horizontal rule, optionally labelled. */
+.sc-sep--sm { padding-block: 1rem; }
+.sc-sep--md { padding-block: 2rem; }
+.sc-sep--lg { padding-block: 3.5rem; }
+.sc-sep__row { display: flex; align-items: center; gap: 1rem; }
+.sc-sep__line { flex: 1; height: 1px; background: hsl(var(--sc-border)); }
+.sc-sep__label { color: hsl(var(--sc-muted-foreground)); font-size: 0.8125rem; font-weight: 500; white-space: nowrap; }

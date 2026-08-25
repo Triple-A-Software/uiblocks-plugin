@@ -1,0 +1,3 @@
+/* Prose — inline rich-text article content (typography lives in base .sc-prose). */
+.sc-prose-block { padding-block: clamp(1.5rem, 4vw, 2.5rem); }
+.sc-prose-block__inner--contained { max-width: 680px; margin-inline: auto; }

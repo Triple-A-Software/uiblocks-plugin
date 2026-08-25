@@ -1,0 +1,6 @@
+/* Button — standalone button/link (styles live in base .sc-btn). */
+.sc-btnblk { padding-block: 0.75rem; }
+.sc-btnblk .sc-container { display: flex; }
+.sc-btnblk--left .sc-container { justify-content: flex-start; }
+.sc-btnblk--center .sc-container { justify-content: center; }
+.sc-btnblk--right .sc-container { justify-content: flex-end; }

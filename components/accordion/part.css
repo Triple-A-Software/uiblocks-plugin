@@ -1,0 +1,10 @@
+/* Accordion — CSS-only expandable panels (rich content) via <details>. */
+.sc-acc__inner { max-width: 768px; margin-inline: auto; }
+.sc-acc__heading { text-align: center; font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 800; letter-spacing: -0.02em; margin-bottom: clamp(1.5rem, 3vw, 2.5rem); color: hsl(var(--sc-foreground)); }
+.sc-acc__item { border: 1px solid hsl(var(--sc-border)); border-radius: var(--sc-radius); margin-bottom: 0.6rem; background: hsl(var(--sc-card)); }
+.sc-acc__summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem 1.25rem; font-weight: 600; color: hsl(var(--sc-foreground)); cursor: pointer; list-style: none; }
+.sc-acc__summary::-webkit-details-marker { display: none; }
+.sc-acc__summary:focus-visible { outline: 2px solid hsl(var(--sc-ring)); outline-offset: -2px; border-radius: var(--sc-radius); }
+.sc-acc__chevron { flex: none; width: 0.6rem; height: 0.6rem; border-right: 2px solid hsl(var(--sc-muted-foreground)); border-bottom: 2px solid hsl(var(--sc-muted-foreground)); transform: rotate(45deg); transition: transform 0.2s; }
+.sc-acc__item[open] .sc-acc__chevron { transform: rotate(-135deg); }
+.sc-acc__content { padding: 0 1.25rem 1.1rem; font-size: 0.94rem; }

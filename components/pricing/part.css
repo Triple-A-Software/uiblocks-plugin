@@ -1,0 +1,23 @@
+/* Pricing — 2–4 plan cards, one optionally highlighted. Features come from a
+   richtext bullet list, restyled with checkmarks. */
+.sc-pricing__head { text-align: center; max-width: 640px; margin: 0 auto clamp(2rem, 4vw, 3rem); }
+.sc-pricing__title { font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 800; letter-spacing: -0.02em; color: hsl(var(--sc-foreground)); }
+.sc-pricing__intro { margin-top: 0.75rem; color: hsl(var(--sc-muted-foreground)); font-size: 1.05rem; }
+.sc-pricing__grid { display: grid; grid-template-columns: repeat(var(--sc-cols, 3), minmax(0, 1fr)); gap: clamp(1rem, 2.5vw, 1.5rem); align-items: start; }
+.sc-plan { position: relative; display: flex; flex-direction: column; padding: 1.75rem; border: 1px solid hsl(var(--sc-border)); border-radius: calc(var(--sc-radius) + 6px); background: hsl(var(--sc-card)); }
+.sc-plan--featured { border-color: hsl(var(--sc-primary)); box-shadow: 0 0 0 1px hsl(var(--sc-primary)); }
+.sc-plan__badge { position: absolute; top: -0.7rem; left: 1.75rem; background: hsl(var(--sc-primary)); color: hsl(var(--sc-primary-foreground)); font-size: 0.7rem; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 9999px; letter-spacing: 0.03em; text-transform: uppercase; }
+.sc-plan__name { font-size: 1.05rem; font-weight: 700; color: hsl(var(--sc-foreground)); }
+.sc-plan__price { margin-top: 0.75rem; display: flex; align-items: baseline; gap: 0.25rem; }
+.sc-plan__amount { font-size: 2.25rem; font-weight: 800; letter-spacing: -0.02em; color: hsl(var(--sc-foreground)); }
+.sc-plan__period { color: hsl(var(--sc-muted-foreground)); font-size: 0.9rem; }
+.sc-plan__desc { margin-top: 0.5rem; color: hsl(var(--sc-muted-foreground)); font-size: 0.9rem; }
+.sc-plan__features { margin: 1.25rem 0; font-size: 0.9rem; }
+.sc-plan__features ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.55rem; }
+.sc-plan__features li { position: relative; padding-left: 1.6rem; color: hsl(var(--sc-foreground)); }
+.sc-plan__features li::before { content: ""; position: absolute; left: 0.1rem; top: 0.3em; width: 0.8rem; height: 0.45rem; border-left: 2px solid hsl(var(--sc-primary)); border-bottom: 2px solid hsl(var(--sc-primary)); transform: rotate(-45deg); }
+.sc-plan__cta { margin-top: auto; width: 100%; border: 1px solid hsl(var(--sc-border)); background: transparent; color: hsl(var(--sc-foreground)); }
+.sc-plan__cta:hover { background: hsl(var(--sc-accent)); }
+.sc-plan--featured .sc-plan__cta { background: hsl(var(--sc-primary)); color: hsl(var(--sc-primary-foreground)); border-color: transparent; }
+.sc-plan--featured .sc-plan__cta:hover { opacity: 0.9; background: hsl(var(--sc-primary)); }
+@media (max-width: 900px) { .sc-pricing__grid { grid-template-columns: 1fr; max-width: 420px; margin-inline: auto; } }

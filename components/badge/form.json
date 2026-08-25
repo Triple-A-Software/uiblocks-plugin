@@ -1,0 +1,16 @@
+{
+    "$schema": "https://neleto.io/schemas/main/form_schema.json",
+    "label": { "de": "Badge", "en": "Badge" },
+    "properties": [
+        { "id": "text", "type": "textarea", "defaultValue": "New", "label": { "de": "Text", "en": "Text" } },
+        { "id": "variant", "type": "select", "dataType": "string", "defaultValue": "default",
+          "options": [ { "value": "default", "label": { "de": "Standard", "en": "Default" } }, { "value": "secondary", "label": { "de": "Sekundär", "en": "Secondary" } }, { "value": "outline", "label": { "de": "Umrandet", "en": "Outline" } }, { "value": "destructive", "label": { "de": "Destruktiv", "en": "Destructive" } } ],
+          "label": { "de": "Variante", "en": "Variant" } },
+        { "id": "theme", "type": "buttongroup", "defaultValue": "auto",
+          "options": [ { "value": "auto", "label": { "de": "Auto", "en": "Auto" } }, { "value": "light", "label": { "de": "Hell", "en": "Light" } }, { "value": "dark", "label": { "de": "Dunkel", "en": "Dark" } } ],
+          "label": { "de": "Farbschema", "en": "Theme" } },
+        { "id": "accent", "type": "select", "dataType": "string", "defaultValue": "",
+          "options": [ { "value": "", "label": { "de": "Neutral", "en": "Neutral" } }, { "value": "blue", "label": { "de": "Blau", "en": "Blue" } }, { "value": "green", "label": { "de": "Grün", "en": "Green" } }, { "value": "violet", "label": { "de": "Violett", "en": "Violet" } }, { "value": "rose", "label": { "de": "Rosé", "en": "Rose" } }, { "value": "amber", "label": { "de": "Bernstein", "en": "Amber" } } ],
+          "label": { "de": "Akzent", "en": "Accent" } }
+    ]
+}

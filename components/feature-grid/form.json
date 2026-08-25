@@ -1,0 +1,37 @@
+{
+    "$schema": "https://neleto.io/schemas/main/form_schema.json",
+    "label": { "de": "Feature-Raster", "en": "Feature Grid" },
+    "properties": [
+        { "id": "heading", "type": "textarea", "label": { "de": "Überschrift", "en": "Heading" } },
+        { "id": "intro", "type": "textarea", "label": { "de": "Einleitung", "en": "Intro" } },
+        { "id": "columns", "type": "select", "dataType": "number", "defaultValue": 3,
+          "options": [ { "value": 2, "label": { "de": "2", "en": "2" } }, { "value": 3, "label": { "de": "3", "en": "3" } }, { "value": 4, "label": { "de": "4", "en": "4" } } ],
+          "label": { "de": "Spalten", "en": "Columns" } },
+        {
+            "id": "items",
+            "type": "builder",
+            "label": { "de": "Features", "en": "Features" },
+            "items": [
+                {
+                    "name": "feature",
+                    "label": { "de": "Feature", "en": "Feature" },
+                    "data": {},
+                    "props": [
+                        { "id": "icon", "type": "text", "label": { "de": "Icon (Tabler-Name)", "en": "Icon (Tabler name)" }, "hint": { "de": "z. B. rocket, bolt, shield", "en": "e.g. rocket, bolt, shield" } },
+                        { "id": "title", "type": "textarea", "label": { "de": "Titel", "en": "Title" } },
+                        { "id": "text", "type": "textarea", "label": { "de": "Text", "en": "Text" } }
+                    ]
+                }
+            ]
+        },
+        { "id": "surface", "type": "buttongroup", "defaultValue": "default",
+          "options": [ { "value": "default", "label": { "de": "Standard", "en": "Default" } }, { "value": "muted", "label": { "de": "Gedämpft", "en": "Muted" } } ],
+          "label": { "de": "Hintergrund", "en": "Surface" } },
+        { "id": "theme", "type": "buttongroup", "defaultValue": "auto",
+          "options": [ { "value": "auto", "label": { "de": "Auto", "en": "Auto" } }, { "value": "light", "label": { "de": "Hell", "en": "Light" } }, { "value": "dark", "label": { "de": "Dunkel", "en": "Dark" } } ],
+          "label": { "de": "Farbschema", "en": "Theme" } },
+        { "id": "accent", "type": "select", "dataType": "string", "defaultValue": "",
+          "options": [ { "value": "", "label": { "de": "Neutral", "en": "Neutral" } }, { "value": "blue", "label": { "de": "Blau", "en": "Blue" } }, { "value": "green", "label": { "de": "Grün", "en": "Green" } }, { "value": "violet", "label": { "de": "Violett", "en": "Violet" } }, { "value": "rose", "label": { "de": "Rosé", "en": "Rose" } }, { "value": "amber", "label": { "de": "Bernstein", "en": "Amber" } } ],
+          "label": { "de": "Akzent", "en": "Accent" } }
+    ]
+}

@@ -1,0 +1,11 @@
+/* Feature grid — 2–4 responsive columns of icon/title/text cards. */
+.sc-features__head { max-width: 720px; margin-bottom: clamp(2rem, 4vw, 3rem); }
+.sc-features__title { font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 800; letter-spacing: -0.02em; color: hsl(var(--sc-foreground)); }
+.sc-features__intro { margin-top: 0.75rem; color: hsl(var(--sc-muted-foreground)); font-size: 1.05rem; line-height: 1.6; }
+.sc-features__grid { display: grid; grid-template-columns: repeat(var(--sc-cols, 3), minmax(0, 1fr)); gap: clamp(1rem, 2.5vw, 1.75rem); }
+.sc-feature { padding: 1.5rem; border: 1px solid hsl(var(--sc-border)); border-radius: calc(var(--sc-radius) + 4px); background: hsl(var(--sc-card)); }
+.sc-feature__icon { display: inline-flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; margin-bottom: 1rem; border-radius: var(--sc-radius); background: hsl(var(--sc-primary)); color: hsl(var(--sc-primary-foreground)); font-size: 1.25rem; }
+.sc-feature__title { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.4rem; color: hsl(var(--sc-foreground)); }
+.sc-feature__text { color: hsl(var(--sc-muted-foreground)); font-size: 0.9375rem; line-height: 1.6; }
+@media (max-width: 900px) { .sc-features__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .sc-features__grid { grid-template-columns: 1fr; } }

@@ -1,0 +1,11 @@
+<section class="sc-block sc-tabs-wrap sc-section{{#if properties.accent}} sc-accent-{{ properties.accent }}{{/if}}" data-sc-theme="{{ properties.theme }}">
+    <div class="sc-container">
+        {{#if properties.heading}}<h2 class="sc-tabs__heading">{{ properties.heading }}</h2>{{/if}}
+        <div class="sc-tabs">
+            {{#each properties.items as item}}
+            <label class="sc-tabs__label"><input class="sc-tabs__radio" type="radio" name="sc-tabs-group">{{ item.data.label }}</label>
+            <div class="sc-tabs__panel sc-prose">{{ item.data.content }}</div>
+            {{/each}}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,6 @@
+/* Spacer — explicit vertical space. */
+.sc-spacer--xs { height: 1rem; }
+.sc-spacer--sm { height: 2rem; }
+.sc-spacer--md { height: 3.5rem; }
+.sc-spacer--lg { height: 5rem; }
+.sc-spacer--xl { height: 8rem; }

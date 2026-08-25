@@ -1,0 +1,13 @@
+{
+    "$schema": "https://neleto.io/schemas/main/plugin_manifest_schema.json",
+    "name": "ui-blocks",
+    "version": "0.6.0",
+    "bin": "sleep infinity",
+    "include_files": [
+        "components/*/.meta.json",
+        "components/*/form.json",
+        "components/*/template.hbs",
+        "components/*/style.css"
+    ],
+    "components": "./components"
+}

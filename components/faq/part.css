@@ -1,0 +1,10 @@
+/* FAQ — CSS-only accordion via <details>/<summary>. */
+.sc-faq__inner { max-width: 768px; margin-inline: auto; }
+.sc-faq__heading { text-align: center; font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 800; letter-spacing: -0.02em; margin-bottom: clamp(1.5rem, 3vw, 2.5rem); color: hsl(var(--sc-foreground)); }
+.sc-faq__item { border-bottom: 1px solid hsl(var(--sc-border)); }
+.sc-faq__q { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.1rem 0; font-weight: 600; font-size: 1rem; color: hsl(var(--sc-foreground)); cursor: pointer; list-style: none; }
+.sc-faq__q::-webkit-details-marker { display: none; }
+.sc-faq__q:focus-visible { outline: 2px solid hsl(var(--sc-ring)); outline-offset: 2px; border-radius: 4px; }
+.sc-faq__chevron { flex: none; width: 0.6rem; height: 0.6rem; border-right: 2px solid hsl(var(--sc-muted-foreground)); border-bottom: 2px solid hsl(var(--sc-muted-foreground)); transform: rotate(45deg); transition: transform 0.2s; }
+.sc-faq__item[open] .sc-faq__chevron { transform: rotate(-135deg); }
+.sc-faq__a { padding: 0 0 1.1rem; color: hsl(var(--sc-muted-foreground)); font-size: 0.9375rem; line-height: 1.65; white-space: pre-line; }

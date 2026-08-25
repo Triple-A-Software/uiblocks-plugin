@@ -1,0 +1,23 @@
+{
+    "$schema": "https://neleto.io/schemas/main/form_schema.json",
+    "label": { "de": "Button", "en": "Button" },
+    "properties": [
+        { "id": "label", "type": "textarea", "defaultValue": "Button", "label": { "de": "Text", "en": "Label" } },
+        { "id": "href", "type": "text", "defaultValue": "/", "label": { "de": "Link", "en": "Link" } },
+        { "id": "variant", "type": "select", "dataType": "string", "defaultValue": "primary",
+          "options": [ { "value": "primary", "label": { "de": "Primär", "en": "Primary" } }, { "value": "secondary", "label": { "de": "Sekundär", "en": "Secondary" } }, { "value": "outline", "label": { "de": "Umrandet", "en": "Outline" } }, { "value": "ghost", "label": { "de": "Ghost", "en": "Ghost" } }, { "value": "destructive", "label": { "de": "Destruktiv", "en": "Destructive" } } ],
+          "label": { "de": "Variante", "en": "Variant" } },
+        { "id": "size", "type": "buttongroup", "defaultValue": "md",
+          "options": [ { "value": "sm", "label": { "de": "Klein", "en": "Small" } }, { "value": "md", "label": { "de": "Mittel", "en": "Medium" } }, { "value": "lg", "label": { "de": "Groß", "en": "Large" } } ],
+          "label": { "de": "Größe", "en": "Size" } },
+        { "id": "align", "type": "buttongroup", "defaultValue": "left",
+          "options": [ { "value": "left", "label": { "de": "Links", "en": "Left" } }, { "value": "center", "label": { "de": "Mitte", "en": "Center" } }, { "value": "right", "label": { "de": "Rechts", "en": "Right" } } ],
+          "label": { "de": "Ausrichtung", "en": "Alignment" } },
+        { "id": "theme", "type": "buttongroup", "defaultValue": "auto",
+          "options": [ { "value": "auto", "label": { "de": "Auto", "en": "Auto" } }, { "value": "light", "label": { "de": "Hell", "en": "Light" } }, { "value": "dark", "label": { "de": "Dunkel", "en": "Dark" } } ],
+          "label": { "de": "Farbschema", "en": "Theme" } },
+        { "id": "accent", "type": "select", "dataType": "string", "defaultValue": "",
+          "options": [ { "value": "", "label": { "de": "Neutral", "en": "Neutral" } }, { "value": "blue", "label": { "de": "Blau", "en": "Blue" } }, { "value": "green", "label": { "de": "Grün", "en": "Green" } }, { "value": "violet", "label": { "de": "Violett", "en": "Violet" } }, { "value": "rose", "label": { "de": "Rosé", "en": "Rose" } }, { "value": "amber", "label": { "de": "Bernstein", "en": "Amber" } } ],
+          "label": { "de": "Akzent", "en": "Accent" } }
+    ]
+}

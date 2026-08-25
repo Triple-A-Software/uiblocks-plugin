@@ -1,0 +1,13 @@
+<header class="sc-block sc-nav{{#if properties.accent}} sc-accent-{{ properties.accent }}{{/if}}{{#if properties.sticky}} sc-nav--sticky{{/if}}" data-sc-theme="{{ properties.theme }}">
+    <input type="checkbox" id="sc-nav-toggle" class="sc-nav__toggle" hidden>
+    <div class="sc-container sc-nav__bar">
+        <a class="sc-nav__brand" href="{{ properties.brandHref }}">{{#if relations.logo as logo}}<img class="sc-nav__logo" src="{{ image_path(logo, 'w_400,fit_inside') }}" alt="{{ properties.brand }}">{{/if}}<span class="sc-nav__brand-text">{{ properties.brand }}</span></a>
+        <label for="sc-nav-toggle" class="sc-nav__burger" aria-label="Toggle menu"><span></span><span></span><span></span></label>
+        <nav class="sc-nav__menu">
+            {{#each properties.links as link}}
+            <a class="sc-nav__link" href="{{ link.data.href }}">{{ link.data.label }}</a>
+            {{/each}}
+            {{#if properties.ctaLabel}}<a class="sc-btn sc-btn--primary sc-nav__cta" href="{{ properties.ctaHref }}">{{ properties.ctaLabel }}</a>{{/if}}
+        </nav>
+    </div>
+</header>

@@ -1,0 +1,9 @@
+{
+    "$schema": "https://neleto.io/schemas/main/form_schema.json",
+    "label": { "de": "Abstandshalter", "en": "Spacer" },
+    "properties": [
+        { "id": "size", "type": "buttongroup", "defaultValue": "md",
+          "options": [ { "value": "xs", "label": { "de": "XS", "en": "XS" } }, { "value": "sm", "label": { "de": "S", "en": "S" } }, { "value": "md", "label": { "de": "M", "en": "M" } }, { "value": "lg", "label": { "de": "L", "en": "L" } }, { "value": "xl", "label": { "de": "XL", "en": "XL" } } ],
+          "label": { "de": "Höhe", "en": "Height" } }
+    ]
+}

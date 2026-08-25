@@ -1,0 +1,15 @@
+{
+    "$schema": "https://neleto.io/schemas/main/form_schema.json",
+    "label": { "de": "Logo-Leiste", "en": "Logo Cloud" },
+    "properties": [
+        { "id": "heading", "type": "textarea", "defaultValue": "Trusted by leading teams", "label": { "de": "Überschrift", "en": "Heading" } },
+        { "id": "logos", "type": "relation", "relationName": "file", "multiple": true, "label": { "de": "Logos", "en": "Logos" }, "hint": { "de": "Wähle die Logo-Bilder aus.", "en": "Pick the logo images." } },
+        { "id": "grayscale", "type": "checkbox", "defaultValue": true, "label": { "de": "Graustufen", "en": "Grayscale" } },
+        { "id": "surface", "type": "buttongroup", "defaultValue": "default",
+          "options": [ { "value": "default", "label": { "de": "Standard", "en": "Default" } }, { "value": "muted", "label": { "de": "Gedämpft", "en": "Muted" } } ],
+          "label": { "de": "Hintergrund", "en": "Surface" } },
+        { "id": "theme", "type": "buttongroup", "defaultValue": "auto",
+          "options": [ { "value": "auto", "label": { "de": "Auto", "en": "Auto" } }, { "value": "light", "label": { "de": "Hell", "en": "Light" } }, { "value": "dark", "label": { "de": "Dunkel", "en": "Dark" } } ],
+          "label": { "de": "Farbschema", "en": "Theme" } }
+    ]
+}

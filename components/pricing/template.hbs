@@ -1,0 +1,25 @@
+<section class="sc-block sc-pricing sc-section sc-section--{{ properties.surface }}{{#if properties.accent}} sc-accent-{{ properties.accent }}{{/if}}" data-sc-theme="{{ properties.theme }}" style="--sc-cols: {{ properties.columns }}">
+    <div class="sc-container">
+        {{#if properties.heading}}
+        <div class="sc-pricing__head">
+            <h2 class="sc-pricing__title">{{ properties.heading }}</h2>
+            {{#if properties.intro}}<p class="sc-pricing__intro">{{ properties.intro }}</p>{{/if}}
+        </div>
+        {{/if}}
+        <div class="sc-pricing__grid">
+            {{#each properties.plans as plan}}
+            <article class="sc-plan{{#if plan.data.highlight}} sc-plan--featured{{/if}}">
+                {{#if plan.data.badge}}<span class="sc-plan__badge">{{ plan.data.badge }}</span>{{/if}}
+                <h3 class="sc-plan__name">{{ plan.data.name }}</h3>
+                <div class="sc-plan__price">
+                    <span class="sc-plan__amount">{{ plan.data.price }}</span>
+                    {{#if plan.data.period}}<span class="sc-plan__period">{{ plan.data.period }}</span>{{/if}}
+                </div>
+                {{#if plan.data.description}}<p class="sc-plan__desc">{{ plan.data.description }}</p>{{/if}}
+                <div class="sc-plan__features">{{ plan.data.features }}</div>
+                {{#if plan.data.ctaLabel}}<a class="sc-btn sc-plan__cta" href="{{ plan.data.ctaHref }}">{{ plan.data.ctaLabel }}</a>{{/if}}
+            </article>
+            {{/each}}
+        </div>
+    </div>
+</section>

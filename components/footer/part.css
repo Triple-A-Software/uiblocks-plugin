@@ -1,0 +1,16 @@
+/* Footer — brand block + wrapping link list + legal row. */
+.sc-footer { background: hsl(var(--sc-card)); border-top: 1px solid hsl(var(--sc-border)); color: hsl(var(--sc-foreground)); }
+.sc-footer__inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; padding-block: clamp(2.5rem, 5vw, 4rem) 1.5rem; }
+.sc-footer__name { display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 700; font-size: 1.125rem; letter-spacing: -0.01em; }
+.sc-footer__logo { display: block; height: 1.9rem; width: auto; max-width: 200px; object-fit: contain; }
+.sc-footer__name:has(.sc-footer__logo) .sc-footer__name-text { display: none; }
+.sc-footer__tagline { margin-top: 0.5rem; max-width: 34ch; color: hsl(var(--sc-muted-foreground)); font-size: 0.9375rem; }
+.sc-footer__links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; align-content: flex-start; max-width: 60%; justify-content: flex-end; }
+.sc-footer__link { color: hsl(var(--sc-muted-foreground)); text-decoration: none; font-size: 0.9375rem; transition: color 0.15s; }
+.sc-footer__link:hover { color: hsl(var(--sc-foreground)); }
+.sc-footer__bottom { padding-block: 1.25rem; border-top: 1px solid hsl(var(--sc-border)); }
+.sc-footer__legal { color: hsl(var(--sc-muted-foreground)); font-size: 0.8125rem; }
+@media (max-width: 640px) {
+    .sc-footer__inner { flex-direction: column; gap: 1.5rem; }
+    .sc-footer__links { max-width: none; justify-content: flex-start; }
+}

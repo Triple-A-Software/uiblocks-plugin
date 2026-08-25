@@ -1,0 +1,29 @@
+{
+    "$schema": "https://neleto.io/schemas/main/form_schema.json",
+    "label": { "de": "Tabs", "en": "Tabs" },
+    "properties": [
+        { "id": "heading", "type": "textarea", "label": { "de": "Überschrift", "en": "Heading" } },
+        {
+            "id": "items",
+            "type": "builder",
+            "label": { "de": "Tabs", "en": "Tabs" },
+            "items": [
+                {
+                    "name": "tab",
+                    "label": { "de": "Tab", "en": "Tab" },
+                    "data": {},
+                    "props": [
+                        { "id": "label", "type": "textarea", "label": { "de": "Reiter", "en": "Label" } },
+                        { "id": "content", "type": "richtext", "label": { "de": "Inhalt", "en": "Content" } }
+                    ]
+                }
+            ]
+        },
+        { "id": "theme", "type": "buttongroup", "defaultValue": "auto",
+          "options": [ { "value": "auto", "label": { "de": "Auto", "en": "Auto" } }, { "value": "light", "label": { "de": "Hell", "en": "Light" } }, { "value": "dark", "label": { "de": "Dunkel", "en": "Dark" } } ],
+          "label": { "de": "Farbschema", "en": "Theme" } },
+        { "id": "accent", "type": "select", "dataType": "string", "defaultValue": "",
+          "options": [ { "value": "", "label": { "de": "Neutral", "en": "Neutral" } }, { "value": "blue", "label": { "de": "Blau", "en": "Blue" } }, { "value": "green", "label": { "de": "Grün", "en": "Green" } }, { "value": "violet", "label": { "de": "Violett", "en": "Violet" } }, { "value": "rose", "label": { "de": "Rosé", "en": "Rose" } }, { "value": "amber", "label": { "de": "Bernstein", "en": "Amber" } } ],
+          "label": { "de": "Akzent", "en": "Accent" } }
+    ]
+}

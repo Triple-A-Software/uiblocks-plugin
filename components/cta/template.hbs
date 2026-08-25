@@ -1,0 +1,14 @@
+<section class="sc-block sc-cta sc-section{{#if properties.accent}} sc-accent-{{ properties.accent }}{{/if}}" data-sc-theme="{{ properties.theme }}">
+    <div class="sc-container">
+        <div class="sc-cta__panel sc-cta__panel--{{ properties.style }}">
+            <div class="sc-cta__text">
+                <h2 class="sc-cta__title">{{ properties.heading }}</h2>
+                {{#if properties.text}}<p class="sc-cta__sub">{{ properties.text }}</p>{{/if}}
+            </div>
+            <div class="sc-cta__actions">
+                {{#if properties.primaryLabel}}<a class="sc-btn sc-btn--primary sc-btn--lg" href="{{ properties.primaryHref }}">{{ properties.primaryLabel }}</a>{{/if}}
+                {{#if properties.secondaryLabel}}<a class="sc-btn sc-btn--outline sc-btn--lg" href="{{ properties.secondaryHref }}">{{ properties.secondaryLabel }}</a>{{/if}}
+            </div>
+        </div>
+    </div>
+</section>

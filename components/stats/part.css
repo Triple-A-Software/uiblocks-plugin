@@ -1,0 +1,6 @@
+/* Stats — a centered metric row. */
+.sc-stats__heading { text-align: center; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; letter-spacing: -0.02em; margin-bottom: clamp(2rem, 4vw, 3rem); color: hsl(var(--sc-foreground)); }
+.sc-stats__grid { display: grid; grid-template-columns: repeat(var(--sc-cols, 4), minmax(0, 1fr)); gap: 2rem; text-align: center; }
+.sc-stat__value { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; letter-spacing: -0.02em; color: hsl(var(--sc-foreground)); line-height: 1; }
+.sc-stat__label { margin-top: 0.5rem; color: hsl(var(--sc-muted-foreground)); font-size: 0.9375rem; }
+@media (max-width: 560px) { .sc-stats__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; } }
